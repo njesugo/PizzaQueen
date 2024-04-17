@@ -1,0 +1,3 @@
+{"_id":{"$oid":"64799f0807d51c70ed799b2c"},"name":"Cannibale","description":"Sauce barbecue, mozzarella, poulet rôti*, merguez*, haché au bœuf assaisonné*.","price":{"$numberDouble":"12.9"}}
+{"_id":{"$oid":"64799eb007d51c70ed799b2b"},"name":"Steack & Cheese","description":"Sauce tomate, mozzarella, haché au bœuf assaisonné*, tomates fraîches, origan.","price":{"$numberDouble":"11.9"}}
+{"_id":{"$oid":"6478e28241ee9fb185a539ca"},"name":"Bacon Groovy","description":"Crème fraîche légère française, mozzarella, poulet rôti*, oignons, bacon, sauce barbecue.","price":{"$numberDouble":"10.9"}}
