@@ -14,7 +14,8 @@ export const ItemSchema: Schema = new Schema(
             type: Number,
             require: true,
         },      
-    }
+    },
+    {versionKey : false}
 );
 
 export interface Item {
