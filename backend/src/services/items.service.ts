@@ -2,38 +2,38 @@ import { Types } from "mongoose";
 
 import { Item, ItemModel} from "../models/items.model";
 
-const getOrders = async () => {
+const getItems = async () => {
     return await ItemModel.find();
 };
 
-const getOrder = async (id: string) => {
+const getItem = async (id: string) => {
     return await ItemModel.findOne({ _id: new Types.ObjectId(id) });
 };
 
-const createOrder = async (orderToCreate: Item) => {
+const createItem = async (orderToCreate: Item) => {
     const newOrder = new ItemModel(orderToCreate);
     await newOrder.save();
-    return getOrders();
+    return getItems();
 }
 
-const updateOrder = async (id : string, orderToUpdate: Item) => {
+const updateItem = async (id : string, orderToUpdate: Item) => {
     await ItemModel.updateOne(
         {
             _id: new Types.ObjectId(id),
         },
         orderToUpdate
     );
-    return await getOrders();
+    return await getItems();
 }
 
-const deleteOrder = async (id: string) => {
+const deleteItem = async (id: string) => {
     await ItemModel.deleteOne({ _id:new Types.ObjectId(id) });
 };
 
 export {
-    getOrders,
-    getOrder,
-    createOrder,
-    updateOrder,
-    deleteOrder,
+    getItems,
+    getItem,
+    createItem,
+    updateItem,
+    deleteItem,
 };

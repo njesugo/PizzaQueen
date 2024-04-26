@@ -58,7 +58,6 @@ export interface Item {
     description: String;
     price: Number;
     quantity: Number;
-
 }
 
 export interface Orders {
