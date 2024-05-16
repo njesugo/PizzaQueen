@@ -7,5 +7,5 @@ export type Order = {
     date: Date;
     status: string;
     client: Client;
-    Items: Item[];
+    items: Item[];
   }
