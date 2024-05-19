@@ -1,3 +1,3 @@
 Another Pizza Distribution Line
 
-But still coding it >_
+Still coding it >_
