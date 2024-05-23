@@ -12,17 +12,17 @@ export default function Home() {
   const [selectedOrder, setSelectedOrder] = useState<OrderType | undefined>();
 
   return (
-      <>
-        <div className="App">
-          <Button type="primary" size="large" icon={<PlusOutlined />}>
-            Ajouter une commande
-          </Button>
-        </div>
-        
-        <div>
-          <OrderSelect setSelectedOrder={setSelectedOrder} />
-          {selectedOrder && <Order order={selectedOrder} />}
-        </div>
-      </>
+    <>
+      <div className="App">
+        <Button type="primary" size="large" icon={<PlusOutlined />}>
+          Commande
+        </Button>
+      </div>
+              
+      <div>
+        <OrderSelect setSelectedOrder={setSelectedOrder} />
+        {selectedOrder && <Order order={selectedOrder} />}
+      </div>
+    </>
   );
 }

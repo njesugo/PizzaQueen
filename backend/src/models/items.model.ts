@@ -1,4 +1,4 @@
-import mongoose, { Schema, Types, model } from "mongoose";
+import { Schema, Types, model } from "mongoose";
 
 export const ItemSchema: Schema = new Schema(
     {
@@ -29,4 +29,3 @@ export const ItemModel = model(
     "items",
     ItemSchema,
 );
-

@@ -1,33 +1,37 @@
 import { Types } from "mongoose";
 
-import { Orders, OrdersModel} from "../models/orders.model";
+import { Order, OrderModel} from "../models/orders.model";
 
 const getOrders = async () => {
-    return await OrdersModel.find();
+    return await OrderModel.find();
 };
 
 const getOrder = async (id: string) => {
-    return await OrdersModel.findOne({ _id: new Types.ObjectId(id) });
+    return await OrderModel.findOne({ _id: new Types.ObjectId(id) });
 };
 
-const createOrder = async (orderToCreate: Orders) => {
-    const newOrder = new OrdersModel(orderToCreate);
+const createOrder = async (orderToCreate: Order) => {
+    const newOrder = new OrderModel(orderToCreate);
     await newOrder.save();
     return getOrders();
 }
 
-const updateOrder = async (id : string, orderToUpdate: Orders) => {
-    await OrdersModel.updateOne(
+const updateOrder = async (id : string, orderToUpdate: Order) => {
+    await OrderModel.updateOne(
         {
-            _id: new Types.ObjectId(id),
+            _id:id
         },
-        orderToUpdate
+        {...orderToUpdate,_id:id}
     );
-    return await getOrders();
+    // orderToUpdate._id=id;
+    // const orders= new OrderModel(orderToUpdate);
+    // await orders.save();
+    return await getOrder(id);
 }
 
 const deleteOrder = async (id: string) => {
-    await OrdersModel.deleteOne({ _id:new Types.ObjectId(id) });
+    await OrderModel.deleteOne({ _id:new Types.ObjectId(id) });
+    return await getOrders();
 };
 
 export {

@@ -10,18 +10,18 @@ const getItem = async (id: string) => {
     return await ItemModel.findOne({ _id: new Types.ObjectId(id) });
 };
 
-const createItem = async (orderToCreate: Item) => {
-    const newOrder = new ItemModel(orderToCreate);
+const createItem = async (itemToCreate: Item) => {
+    const newOrder = new ItemModel(itemToCreate);
     await newOrder.save();
     return getItems();
 }
 
-const updateItem = async (id : string, orderToUpdate: Item) => {
+const updateItem = async (id : string, itemToUpdate: Item) => {
     await ItemModel.updateOne(
         {
-            _id: new Types.ObjectId(id),
+            _id:id
         },
-        orderToUpdate
+        itemToUpdate
     );
     return await getItems();
 }
