@@ -3,8 +3,8 @@ Another Pizza Distribution Line
 Still coding it >_
 
 
-[ui/1.png]
+![`Login with Google`](ui/1.png)
 
-[ui/2.png]
+![`Dashboard`](ui/2.png)
 
-[ui/3.png]
+![`Adding Order`](ui/3.png)
