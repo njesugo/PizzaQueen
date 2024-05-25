@@ -1,6 +1,6 @@
 Another Pizza Distribution Line
 
-Still coding it >_
+Still coding it >_ So Minimalist
 
 
 ![`Login with Google`](ui/1.png)
