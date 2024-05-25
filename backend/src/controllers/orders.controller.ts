@@ -23,13 +23,15 @@ export const updateOrder = async (req: any, res: any) => {
     id,
     req.body
   );
-  return res.status(200).json(orderToUpdate);
+  return res
+    .status(200)
+    .json(orderToUpdate);
 };
 
 export const deleteOrder = async (req: any, res: any) => {
-    const { id } = req.params;
-    await OrdersService.deleteOrder(id);
-    return res
-      .status(200)
-      .json(`Student with id ${id} succesfully deleted`);
+  const { id } = req.params;
+  await OrdersService.deleteOrder(id);
+  return res
+    .status(200)
+    .json(`Student with id ${id} succesfully deleted`);
 };

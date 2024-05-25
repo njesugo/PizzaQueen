@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import cors from "cors";
 import { routerOrder } from "./routes/orders.route";
 import { routerItem } from "./routes/items.route";
+import morgan from 'morgan';
 
 const hostname = "127.0.0.1";
 const port = 5000;
@@ -21,6 +22,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
+app.use(morgan('tiny'));
 
 app.get("/", (req, res) => {
   res.send("Hello !");
@@ -32,3 +34,4 @@ app.use("/items", routerItem);
 app.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
 });
+

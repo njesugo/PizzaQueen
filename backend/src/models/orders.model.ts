@@ -23,7 +23,7 @@ const ItemSchema: Schema = new Schema(
 );
 
 
-export const OrdersSchema : Schema = new Schema(
+export const OrderSchema : Schema = new Schema(
     {
         number:{
             type: String,
@@ -60,8 +60,8 @@ export interface Item {
     quantity: Number;
 }
 
-export interface Orders {
-    _id: Types.ObjectId;
+export interface Order {
+    _id:string     ///Types.ObjectId;
     number: String;
     date: Date;
     status: String;
@@ -69,7 +69,7 @@ export interface Orders {
     items: Item[];
 }
 
-export const OrdersModel = model(
+export const OrderModel = model(
     "orders",
-    OrdersSchema,
+    OrderSchema,
 );
