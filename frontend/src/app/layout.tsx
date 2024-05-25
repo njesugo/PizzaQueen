@@ -1,7 +1,8 @@
+import { Header } from '@/components/Header'
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { League_Spartan } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = League_Spartan({ subsets: ['latin'] })
 
 export const metadata = {
   title: '',
@@ -15,7 +16,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className='max-w-6xl mx-auto py-10'>
+          <Header />
+          {children}
+        </div>
+      </body>
     </html>
   )
 }

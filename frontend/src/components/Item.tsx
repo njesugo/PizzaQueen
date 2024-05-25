@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import {  Button, InputNumber, Input, InputNumberProps } from "antd"
+import { Button, InputNumber, Input, InputNumberProps } from "antd"
 import { CloseOutlined, PlusOutlined } from "@ant-design/icons"
 import { Item } from "@/types/Items";
 import { Order } from "@/types/Orders";

@@ -1,8 +1,9 @@
-import {Order as OrderType} from "../types/Orders"
+import { Order as OrderType } from "../types/Orders"
 import { useState } from "react";
-import {  Button, InputNumber, Input, InputNumberProps } from "antd"
+import { Button, InputNumber, Input, InputNumberProps } from "antd"
 import { CloseOutlined, PlusOutlined } from "@ant-design/icons"
 import { OrderItem } from "./Item";
+
 type OrderProps = {
     order : OrderType;
 }

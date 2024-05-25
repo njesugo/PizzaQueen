@@ -6,6 +6,7 @@ import { Order as OrderType } from "../types/Orders";
 import { useState } from "react";
 import { Button } from 'antd';
 import { PlusOutlined } from '@ant-design/icons';
+import { OrderList } from "../components/OrderList";
 
 export default function Home() {
 
@@ -13,7 +14,13 @@ export default function Home() {
 
   return (
     <>
-      <div className="App">
+      <OrderList />
+    </>
+  );
+}
+
+
+{/* <div className="App">
         <Button type="primary" size="large" icon={<PlusOutlined />}>
           Commande
         </Button>
@@ -22,7 +29,4 @@ export default function Home() {
       <div>
         <OrderSelect setSelectedOrder={setSelectedOrder} />
         {selectedOrder && <Order order={selectedOrder} />}
-      </div>
-    </>
-  );
-}
+      </div> */}
