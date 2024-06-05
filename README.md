@@ -1,4 +1,4 @@
-Another Pizza Distribution Line
+Modern Web App for Pizza Orders
 
 >_ So Minimalist
 
